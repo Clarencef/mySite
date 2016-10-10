@@ -1,7 +1,7 @@
 ## Running locally
 
 - `git clone` this repo
-- `cd testing-react-with-jest`
+- `cd jest-test`
 - `npm install`
 - In one tab, run `npm run watch`. This will fire up Webpack and rebuild your app on each change.
 - In another tab, run `npm start`. This will fire up a local server that will refresh automatically when the code changes.
