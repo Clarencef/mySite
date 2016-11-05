@@ -12,6 +12,7 @@ export default class Input extends Component {
           onChange={this.props.onChange}
           autoComplete="off"
           required
+          aria-required="true"
         />
         <label htmlFor={this.props.id}></label>
       </div>

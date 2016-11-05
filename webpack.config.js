@@ -6,17 +6,22 @@ const BUILD_DIR = path.resolve(__dirname, 'public');
 const APP_DIR = path.resolve(__dirname, 'app');
 
 const config = {
-  entry: APP_DIR + '/index.js',
   devtool: 'source-map',
+  entry: [
+    'webpack-hot-middleware/client?reload=true',
+    APP_DIR + '/index.js',
+  ],
   output: {
     path: BUILD_DIR,
-    filename: 'bundle.js'
+    filename: 'bundle.js',
+    publicPath: '/'
   },
   module: {
     loaders: [{
       test: /\.js$/,
       exclude: /node_modules/,
-      loader: 'babel'
+      include: path.join(__dirname, 'app'),
+      loader: 'babel',
     }, {
       test: /\.(scss|css)$/,
       loader: ExtractTextPlugin.extract(
@@ -45,8 +50,11 @@ const config = {
   plugins: [
     new ExtractTextPlugin('main.css', {
       allChunks: true
-    })
-  ]
-}
+    }),
+    new webpack.optimize.OccurenceOrderPlugin(), // recommanded by webpack
+    new webpack.HotModuleReplacementPlugin(),
+    new webpack.NoErrorsPlugin() // recommanded by webpack
+  ],
+};
 
 module.exports = config;

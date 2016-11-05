@@ -48,7 +48,7 @@ export default class Modal extends Component {
     return (
       <div className="modal">
         <form onSubmit={this.props.onSubmit} className="modal_form">
-          {this.state.inputItem.map((item,i) => {
+          {this.state.inputItem.map((item, i) => {
             return (
               <Input
                 key={i}
@@ -68,3 +68,7 @@ export default class Modal extends Component {
     );
   }
 }
+
+Modal.propTypes = {
+  onSubmit: React.PropTypes.func,
+};

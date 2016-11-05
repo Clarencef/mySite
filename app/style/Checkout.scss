@@ -1,0 +1,82 @@
+@import '~react-dates/css/variables.scss';
+@import '~react-dates/css/styles.scss';
+
+.checkout_container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+}
+
+.checkout_overlay {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  filter: blur(10px);
+}
+
+.checkout_Card {
+  position:relative;
+  width: 40em;
+  height: 30em;
+  background: white;
+  border-radius: 5px;
+  box-shadow: 2px 2px 10px #999;
+}
+
+.checkout_datepicker_container {
+  position: absolute;
+  top: -50px;
+  right: 0;
+}
+
+.ImagePreview_container {
+  display: inline-block;
+  position: relative;
+  width: 50%;
+  overflow: hidden;
+  .ImagePreview_description {
+    position: absolute;
+    bottom: 0;
+    padding:0 0 15px 15px;
+    color: white;
+  }
+  .ImagePreview_slider {
+    width: 80em;
+  }
+  li {
+    display: inline-block;
+  }
+  a {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 45px;
+    width: 30px;
+    top: 50%;
+    transform: translateY(-8px);
+    color: white;
+    text-decoration: none;
+    background: rgba(0, 0, 0, 0.5);
+  }
+  .ImagePreview_Next {
+    right: 0;
+  }
+  img {
+    width: 20em;
+    height: 30em;
+    object-fit: cover;
+    border-radius: 5px 0 0 5px;
+  }
+}
+
+.checkoutInfo_container {
+  display: inline-block;
+  width: 50%;
+}

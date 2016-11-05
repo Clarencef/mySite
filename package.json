@@ -1,12 +1,12 @@
 {
-  "name": "testing-react-with-jest",
+  "name": "testing-jest",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "watch": "webpack -w",
     "build": "webpack",
-    "start": "live-server --port=8081 --open=/public",
+    "start": "babel-node server.js",
     "test": "jest --coverage",
     "watch:test": "jest --watch"
   },
@@ -14,11 +14,16 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "express": "^4.14.0",
     "font-awesome": "^4.6.3",
+    "immutability-helper": "^2.0.0",
+    "moment": "^2.15.2",
     "normalize.css": "^5.0.0",
-    "react": "15.3.2",
+    "react": "^15.3.2",
     "react-addons-css-transition-group": "^15.3.2",
-    "react-dom": "15.3.2",
+    "react-addons-shallow-compare": "^15.3.2",
+    "react-dates": "^3.4.0",
+    "react-dom": "^15.3.2",
     "react-router": "^2.8.1",
     "shortid": "2.2.6"
   },
@@ -28,6 +33,7 @@
     "babel-eslint": "^7.0.0",
     "babel-jest": "16.0.0",
     "babel-loader": "6.2.5",
+    "babel-plugin-react-transform": "^2.0.2",
     "babel-polyfill": "6.16.0",
     "babel-preset-es2015": "6.16.0",
     "babel-preset-react": "6.16.0",
@@ -42,13 +48,16 @@
     "file-loader": "^0.9.0",
     "image-webpack-loader": "^2.0.0",
     "jest": "16.0.0",
-    "live-server": "1.1.0",
     "node-sass": "^3.10.1",
     "react-addons-test-utils": "15.3.2",
+    "react-hot-loader": "^1.3.0",
     "react-test-renderer": "15.3.2",
+    "react-transform-hmr": "^1.0.4",
     "sass-loader": "^4.0.2",
     "style-loader": "^0.13.1",
     "url-loader": "^0.5.7",
-    "webpack": "1.13.2"
+    "webpack": "1.13.2",
+    "webpack-dev-middleware": "^1.8.4",
+    "webpack-hot-middleware": "^2.13.1"
   }
 }

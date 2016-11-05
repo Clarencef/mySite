@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import Modal from '../components/Modal';
 
-import FormStyle from '../style/FormPage.scss'; 
+import '../style/FormPage.scss';
 
 export default class FormPage extends Component {
   constructor() {

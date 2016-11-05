@@ -1,0 +1,16 @@
+.header {
+  ul {
+    background: #87CEFA;
+    li {
+      display: inline-block;
+    }
+    a {
+      display: block;
+      padding: 12px;
+      text-decoration: none;
+      margin: 0 10px;
+      color: white;
+      border-radius: 4px;
+    }
+  }
+}

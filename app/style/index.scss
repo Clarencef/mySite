@@ -14,6 +14,11 @@ body {
   margin-top: 0;
 }
 
+.main_container {
+  width: 100vw;
+  height: 100vh;
+}
+
 .todo p:hover {
   cursor: pointer;
 }

@@ -1,6 +1,7 @@
 node_modules/
 bundle.js
-undle.js.map
+bundle.js.map
 main.css
 main.css.map
+npm-debug.log
 coverage/

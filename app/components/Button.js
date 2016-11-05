@@ -10,3 +10,11 @@ export default class Button extends Component {
     );
   }
 }
+
+Button.propTypes = {
+  BtnSetting: React.PropTypes.shape({
+    btnText: React.PropTypes.string,
+    btnClass: React.PropTypes.string,
+  }),
+};
+
