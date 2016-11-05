@@ -43,8 +43,8 @@ Header.defaultProps = {
       text: 'todo',
       url: '/todos'
     }, {
-      text: 'dddd',
-      url: '#'
+      text: 'FlipCard',
+      url: '/FlipCard'
     },
   ],
 };

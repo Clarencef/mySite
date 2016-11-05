@@ -34,7 +34,7 @@ export default class CheckoutPage extends Component {
             <OrderSummary />
             <Payment />
           </Checkout>
-        </Card> 
+        </Card>
       </div>
     );
   }
