@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 import Input from './Input';
-import Button from './Button';
+import Button from 'components/Button/Button';
 
 export default class Modal extends Component {
   constructor() {
@@ -61,7 +61,9 @@ export default class Modal extends Component {
             );
           })}
           <Button
-            BtnSetting={this.state.button}
+            buttonType="normal"
+            href="javascript:void(0)"
+            customClass="modal"
           />
         </form>
       </div>

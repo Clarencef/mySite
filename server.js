@@ -1,6 +1,7 @@
 var express = require('express');
 var webpack = require('webpack');
 var path = require('path');
+var cors = require('cors');
 var webpackDevMiddleware = require("webpack-dev-middleware");
 var webpackHotMiddleware = require("webpack-hot-middleware");
 var webpackConfig = require('./webpack.config');
@@ -8,9 +9,10 @@ var webpackConfig = require('./webpack.config');
 var app = express();
 var compiler = webpack(webpackConfig);
 
-app.use(express.static(__dirname +'/public'));
 app.use(webpackDevMiddleware(compiler));
 app.use(webpackHotMiddleware(compiler));
+
+app.use(express.static(__dirname +'/public'));
 
 app.get('/', (req,res) => {
   res.sendFile(path.join(__dirname + '/public/index.html'));
@@ -22,6 +24,6 @@ app.listen(PORT, () => {
   console.log(`App listening on port ${PORT}`);
 });
 
-module.exports = app
+module.exports = app;
 
 

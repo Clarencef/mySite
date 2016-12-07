@@ -47,6 +47,12 @@ const config = {
       ]
     }]
   },
+  resolve: {
+    alias: {
+      components: APP_DIR + '/components',
+      util: APP_DIR + '/util'
+    }
+  },
   plugins: [
     new ExtractTextPlugin('main.css', {
       allChunks: true
